@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Perfil</h2>
+
+<p><b>Nombre:</b> {{ user.first_name }}</p>
+<p><b>Apellido:</b> {{ user.last_name }}</p>
+<p><b>Email:</b> {{ user.email }}</p>
+
+<p><b>Biografía:</b> {{ user.profile.bio }}</p>
+
+<br>
+
+<a href="{% url 'edit_profile' %}">Editar perfil</a>
+
+<br>
+
+<a href="{% url 'password_change' %}">Cambiar contraseña</a>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Páginas</h1>
+
+{% if object_list %}
+
+{% for post in object_list %}
+
+<h2>{{post.titulo}}</h2>
+
+<p>{{post.subtitulo}}</p>
+
+<a href="/pages/{{post.id}}">Leer más</a>
+
+<hr>
+
+{% endfor %}
+
+{% else %}
+
+<p>No hay páginas aún</p>
+
+{% endif %}
+
+{% endblock %}

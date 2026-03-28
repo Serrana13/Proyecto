@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mi Blog</title>
+</head>
+
+<body>
+
+<nav>
+
+<a href="/">Inicio</a>
+
+<a href="/about/">Sobre mí</a>
+
+<a href="/pages/">Paginas</a>
+
+<a href="/accounts/login/">Login</a>
+
+<a href="/accounts/signup/">Signup</a>
+
+<a href="/accounts/profile/">Perfil</a>
+
+<form action="/accounts/logout/" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+</nav>
+
+<hr>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
